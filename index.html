@@ -52,6 +52,9 @@
           <li>
             <a href="#Work" class="block py-2 pl-3 pr-4 text-white  rounded md:bg-transparent  md:p-0 hover:text-red-600 duration-300 ">Projects</a>
           </li>
+          <li>
+            <a href="#Fun" class="block py-2 pl-3 pr-4 text-white  rounded md:bg-transparent  md:p-0 hover:text-red-600 duration-300 ">Fun</a>
+          </li>
 
         </ul>
       </div>
@@ -188,9 +191,140 @@
 </section>
 <!--end work-->
 
+<!-- Fun -->
+<section id="Fun" class="py-10 md:py-32 animate-fade-up animate-once animate-ease-in-out animate-duration-[1500ms]">
+  <div class="bg-[url('/asset/img/2.png')] bg-cover bg-center from-transparent via-red-600 to-transparent ">
+    <div class="bg-black bg-opacity-60">
+      <div class="bg-white/5">
+        <div class="container mx-auto text-center">
+          <div class="md:grid md:grid-cols-12 md:gap-20 items-center">
+            <div class="col-start-3 col-span-8 py-32">
+              <h1
+                class="font-logo text-5xl md:text-3xl capitalize  text-red-600 font-black hover:text-white leading-tight duration-300 ">
+                Strong Password Generator
+              </h1>
+
+              <div class="mt-7">
+                <label for="length" class="text-white font-bold font-logo">Password Length:</label>
+                <input type="number" id="length" name="length"
+                    class="ml-2 border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    min="6" max="30" value="12">
+            </div>
+            <div class="mb-6">
+                <label for="includeUppercase" class="text-white font-bold font-logo">Include Uppercase Letters:</label>
+                <input type="checkbox" id="includeUppercase" name="includeUppercase" class="ml-2">
+            </div>
+            <div class="mb-6">
+                <label for="includeNumbers" class="text-white font-bold font-logo">Include Numbers:</label>
+                <input type="checkbox" id="includeNumbers" name="includeNumbers" class="ml-2">
+            </div>
+            <div class="mb-6">
+                <label for="includeSymbols" class="text-white font-bold font-logo">Include Symbols:</label>
+                <input type="checkbox" id="includeSymbols" name="includeSymbols" class="ml-2">
+            </div>
+            <button id="generateBtn"
+                class="bg-red-700 hover:bg-red-900 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline duration-300">Generate
+                Password</button>
+            <div id="password" class="mt-6 font-logo text-3xl text-red-600 hover:text-white"></div>
+
+            <!-- CODE SESSION -->
+            <div class="rrelative  mx-auto mt-5">
+              <div class="bg-black bg-opacity-60 text-white p-4 rounded-md">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-white font-logo text-xl" >Code:</span>
+                    <button class="code bg-red-600 hover:bg-red-800 duration-300 text-gray-300 px-3 py-1 rounded-md font-logo text-xl" data-clipboard-target="#code">
+                Copy
+              </button>
+                </div>
+                <div class="overflow-x-auto text-start">
+                <pre id="code" class="text-gray-300 max-h-52 max-w-52">
+        <code>
+        &lt;div class="flex flex-col items-center justify-center h-screen"&gt;
+        &lt;div class="mb-6"&gt;
+        &lt;label for="length" class="text-white font-bold"&gt; Password Lenght &lt;/label&gt;
+        &lt;input type="number" id="length" name="length" 
+        class="ml-2 border rounded py-2 px-3 text-white leading-tight 
+        focus:outline-none 
+        focus:shadow-outline"
+        min="6" max="30" value="12"&gt;
+        &lt;/div&gt;
+        &lt;div class="mb-6"&gt; 
+        &lt;label for="includeUppercase" class="text-gray-700 font-bold">Include Uppercase Letters:&lt;/label&gt;
+        &lt;input type="checkbox" id="includeUppercase" name="includeUppercase" class="ml-2"&gt;
+        &lt;/div&gt;
+        &lt;div class="mb-6"&gt; 
+        &lt;label for="includeNumbers" class="text-gray-700 font-bold">Include Numbers:&lt;/label&gt;
+        &lt;input type="checkbox" id="includeNumbers" name="includeNumbers" class="ml-2&gt;
+        &lt;/div&gt;
+        &lt;div class="mb-6"&gt; 
+        &lt;label for="includeSymbols" class="text-gray-700 font-bold">Include Symbols:&lt;/label&gt;
+        &lt;input type="checkbox" id="includeSymbols" name="includeSymbols" class="ml-2"&gt;
+        &lt;/div&gt;
+        &lt;button id="generateBtn 
+        class="bg-red-700 
+        hover:bg-red-900 text-white font-bold py-2 
+        px-4 rounded-full focus:outline-none focus:shadow-outline duration-300"
+        >Generate Password&lt;/button&gt;
+        &lt;div id="password" class="mt-6"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;script&gt;
+        var generateBtn = document.getElementById('generateBtn');
+        var lengthInput = document.getElementById('length');
+        var includeUppercaseInput = document.getElementById('includeUppercase');
+        var includeNumbersInput = document.getElementById('includeNumbers');
+        var includeSymbolsInput = document.getElementById('includeSymbols');
+        var passwordDisplay = document.getElementById('password');
+    
+        var lowercaseLetters = 'abcdefghijklmnopqrstuvwxyz';
+        var uppercaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var numbers = '0123456789';
+        var symbols = '!@#$%^&*()_+-={}[]|\\:;"<>,.?/~';
+    
+        generateBtn.addEventListener('click', () => {
+            var length = lengthInput.value;
+            var includeUppercase = includeUppercaseInput.checked;
+            var includeNumbers = includeNumbersInput.checked;
+            var includeSymbols = includeSymbolsInput.checked;
+    
+            let validChars = lowercaseLetters;
+            if (includeUppercase) validChars += uppercaseLetters;
+            if (includeNumbers) validChars += numbers;
+            if (includeSymbols) validChars += symbols;
+    
+            let password = '';
+            for (let i = 0; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * validChars.length);
+                password += validChars[randomIndex];
+            }
+    
+            passwordDisplay.innerText = password;
+        });
+        &lt;/script&gt;
+      </code>
+        </pre>
+              </div>
+            </div>
+            </div>
+            <!--end CODE -->
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<!--End Fun-->
+
+
+
+
+
+
   <!--footer-->
 
-<footer class="container mx-auto py-16 mt-10 ">
+<footer class="container mx-auto py-16  mt-10 ">
   <div class="px-3 md:px-0 flex flex-col md:flex-row md:justify-between items-center">
     <div class="text-center md:text-left">
       <h5 class="text-4xl uppercase font-black text-red-600 hover:text-white duration-300 font-logo">Tetsuya Kumiko</h5><a href="mailto:pratamatama1024@gmail.com"
@@ -222,7 +356,82 @@
 <div class="bg-white/5 text-center text-xl  p-4 text-white hover:text-red-600 duration-300 font-logo">© 2023 Copyright <span class="text-red-600 hover:text-white duration-300"> Tetsuya Kumiko </span></div>
 <!-- End Footer-->
 
+<button id="to-top-button" onclick="goToTop()" title="Go To Top"
+    class="hidden fixed z-50 bottom-10 right-10 p-4 border-0 w-14 h-14 rounded-full shadow-md bg-red-600 hover:bg-white text-black text-lg font-semibold transition-colors duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+        <path d="M12 4l8 8h-6v8h-4v-8H4l8-8z" />
+    </svg>
+    <span class="sr-only">Go to top</span>
+</button>
 
+<!-- Script -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+<script>
+    new ClipboardJS('.code');
+</script>
+
+<script>
+  var generateBtn = document.getElementById('generateBtn');
+  var lengthInput = document.getElementById('length');
+  var includeUppercaseInput = document.getElementById('includeUppercase');
+  var includeNumbersInput = document.getElementById('includeNumbers');
+  var includeSymbolsInput = document.getElementById('includeSymbols');
+  var passwordDisplay = document.getElementById('password');
+
+  var lowercaseLetters = 'abcdefghijklmnopqrstuvwxyz';
+  var uppercaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var numbers = '0123456789';
+  var symbols = '!@#$%^&*()_+-={}[]|\\:;"<>,.?/~';
+
+  generateBtn.addEventListener('click', () => {
+      var length = lengthInput.value;
+      var includeUppercase = includeUppercaseInput.checked;
+      var includeNumbers = includeNumbersInput.checked;
+      var includeSymbols = includeSymbolsInput.checked;
+
+      let validChars = lowercaseLetters;
+      if (includeUppercase) validChars += uppercaseLetters;
+      if (includeNumbers) validChars += numbers;
+      if (includeSymbols) validChars += symbols;
+
+      let password = '';
+      for (let i = 0; i < length; i++) {
+          const randomIndex = Math.floor(Math.random() * validChars.length);
+          password += validChars[randomIndex];
+      }
+
+      passwordDisplay.innerText = password;
+  });
+</script>
+
+
+
+<script>
+  // Get the 'to top' button element by ID
+  var toTopButton = document.getElementById("to-top-button");
+
+  // Check if the button exists
+  if (toTopButton) {
+
+      // On scroll event, toggle button visibility based on scroll position
+      window.onscroll = function() {
+          if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+              toTopButton.classList.remove("hidden");
+          } else {
+              toTopButton.classList.add("hidden");
+          }
+      };
+
+      // Function to scroll to the top of the page smoothly
+      window.goToTop = function() {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+      };
+  }
+</script>
 
 
     
