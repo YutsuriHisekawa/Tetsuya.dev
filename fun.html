@@ -267,7 +267,7 @@
             <div class="md:grid md:grid-cols-12 md:gap-20 items-center">
               <div class="col-start-3 col-span-8 py-32">
                 <h1
-                  class="font-logo text-5xl md:text-3xl capitalize  text-white font-black hover:text-red-600 leading-tight duration-300 ">
+                  class="font-logo text-5xl md:text-3xl capitalize  text-red-600 font-black hover:text-white leading-tight duration-300 ">
                   Console Input
                 </h1>
   
@@ -307,6 +307,143 @@
     </div>
   </section>
  <!-- EndFun3-->
+
+  <!--Fun4-->
+  <section id="Fun" class="py-10 md:py-32 animate-fade-up animate-once animate-ease-in-out animate-duration-[1500ms]">
+    <div class="bg-cover bg-center from-transparent via-red-600 to-transparent "
+      style="background-image: url('/asset/img/5.png');">
+      <div class="bg-black bg-opacity-60">
+        <div class="bg-white/5">
+          <div class="container mx-auto text-center">
+            <div class="md:grid md:grid-cols-12 md:gap-20 items-center">
+              <div class="col-start-3 col-span-8 py-32">
+                <h1
+                  class="font-logo text-5xl md:text-3xl capitalize  text-white font-black hover:text-red-600 leading-tight duration-300 mb-5">
+                  Drag and Drop
+                </h1>
+
+                <div class="w-[400px] relative border-2 border-white border-dashed rounded-lg p-6 " id="dropzone">
+                  <input type="file" class="absolute inset-0 w-full h-full opacity-0 z-50" />
+
+                  <div class="text-center ">
+                    <svg class="mx-auto h-12 w-12" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFFFFF" class="bi bi-upload" viewBox="0 0 16 16">
+                      <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                      <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                    </svg>
+
+              
+                      <h3 class="mt-2 text-sm font-medium text-white font-logo">
+                          <label for="file-upload" class="relative cursor-pointer">
+                              <span>Drag and drop</span>
+                              <span class="text-white"> or browse</span>
+                              <span>to upload</span>
+                              <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                          </label>
+                      </h3>
+                      <p class="mt-1 text-sm text-red-600 font-logo">
+                          PNG, JPG, GIF up to 10MB
+                      </p>
+                  </div>
+              
+                  <img src="" class="mt-4 mx-auto max-h-40 hidden" id="preview">
+              </div>
+
+                <!-- CODE SESSION -->
+                <div class="rrelative  mx-auto mt-5">
+                  <div class="bg-black bg-opacity-60 text-white p-4 rounded-md">
+                    <div class="flex justify-between items-center mb-2">
+                      <span class="text-white font-logo text-xl">Code:</span>
+                      <button
+                        class="code bg-red-600 hover:bg-red-800 duration-300 text-gray-300 px-3 py-1 rounded-md font-logo text-xl"
+                        data-clipboard-target="#code">
+                        Copy
+                      </button>
+                    </div>
+                    <div class="overflow-x-auto text-start">
+                      <pre id="code" class="text-gray-300 max-h-52 max-w-52">
+          <code>
+&lt;div class="w-[400px] relative border-2 border-white border-dashed rounded-lg p-6 " id="dropzone">
+&lt;input type="file" class="absolute inset-0 w-full h-full opacity-0 z-50" />
+
+&lt;div class="text-center ">
+&lt;svg class="mx-auto h-12 w-12" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFFFFF"
+class="bi bi-upload" viewBox="0 0 16 16">
+&lt;path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2
+2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+&lt;path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354
+4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+&lt;/svg>
+
+
+&lt;h3 class="mt-2 text-sm font-medium text-white font-logo">
+&lt;label for="file-upload" class="relative cursor-pointer">
+&lt;span>Drag and drop&lt;/span>
+&lt;span class="text-white"> or browse&lt;/span>
+&lt;span>to upload&lt;/span>
+&lt;input id="file-upload" name="file-upload" type="file" class="sr-only">
+&lt;/label>
+&lt;/h3>
+&lt;p class="mt-1 text-sm text-red-600 font-logo">
+PNG, JPG, GIF up to 10MB
+&lt;/p>
+&lt;/div>
+
+&lt;img src="" class="mt-4 mx-auto max-h-40 hidden" id="preview">
+&lt;/div>
+
+&lt;script>
+              var dropzone = document.getElementById('dropzone');
+          
+              dropzone.addEventListener('dragover', e => {
+                  e.preventDefault();
+                  dropzone.classList.add('border-indigo-600');
+              });
+          
+              dropzone.addEventListener('dragleave', e => {
+                  e.preventDefault();
+                  dropzone.classList.remove('border-indigo-600');
+              });
+          
+              dropzone.addEventListener('drop', e => {
+                  e.preventDefault();
+                  dropzone.classList.remove('border-indigo-600');
+                  var file = e.dataTransfer.files[0];
+                  displayPreview(file);
+              });
+          
+              var input = document.getElementById('file-upload');
+          
+              input.addEventListener('change', e => {
+                  var file = e.target.files[0];
+                  displayPreview(file);
+              });
+          
+              function displayPreview(file) {
+                  var reader = new FileReader();
+                  reader.readAsDataURL(file);
+                  reader.onload = () => {
+                      var preview = document.getElementById('preview');
+                      preview.src = reader.result;
+                      preview.classList.remove('hidden');
+                    };
+              }
+              &lt;/script>
+
+        </code>
+                </pre>
+                    </div>
+                  </div>
+                </div>
+                <!--end CODE -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- EndFun4-->
 
 
 
