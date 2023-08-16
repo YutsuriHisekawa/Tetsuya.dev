@@ -457,7 +457,7 @@ PNG, JPG, GIF up to 10MB
                   class="font-logo text-5xl md:text-3xl capitalize  text-red-600 font-black hover:text-white leading-tight duration-300 mb-5">
                   Dark Mode
                 </h1>
-  
+                
                 <div class="h-96 w-screen flex justify-center items-center bg-white bg-opacity-70 dark:bg-red-800 dark:bg-opacity-60 duration-300 rounded-xl">
                   <button onclick="(() => document.body.classList.toggle('dark'))()"
                         class="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-red-700">
@@ -512,6 +512,99 @@ PNG, JPG, GIF up to 10MB
     </div>
   </section>
  <!-- EndFun5-->
+
+ <!--Fun6-->
+ <section id="Fun" class="py-10 md:py-32 animate-fade-up animate-once animate-ease-in-out animate-duration-[1500ms]">
+  <div class="bg-cover bg-center from-transparent via-red-600 to-transparent "
+    style="background-image: url('/asset/img/6.png');">
+    <div class="bg-black bg-opacity-60">
+      <div class="bg-white/5">
+        <div class="container mx-auto text-center">
+          <div class="md:grid md:grid-cols-12 md:gap-20 items-center">
+            <div class="col-start-3 col-span-8 py-32">
+              <h1
+                class="font-logo text-5xl md:text-3xl capitalize  text-white font-black hover:text-red-600 leading-tight duration-300 mb-5">
+                Countdown Timer
+              </h1>
+
+              <div class="flex justify-center">
+                <div class=" rounded-lg shadow-lg px-8 py-6">
+                    <div class="flex flex-col gap-4 items-center justify-between">
+                        <h3 class="text-2xl font-bold text-red-600 font-logo">My Brithday</h3>
+                        <span id="countdown" class="text-5xl font-semibold text-white hover:text-red-600 duration-300 font-logo"></span>
+                    </div>
+                </div>
+            </div>
+
+              <!-- CODE SESSION -->
+              <div class="rrelative  mx-auto mt-5">
+                <div class="bg-black bg-opacity-60 text-white p-4 rounded-md">
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="text-white font-logo text-xl">Code:</span>
+                    <button
+                      class="code bg-red-600 hover:bg-red-800 duration-300 text-gray-300 px-3 py-1 rounded-md font-logo text-xl"
+                      data-clipboard-target="#code">
+                      Copy
+                    </button>
+                  </div>
+                  <div class="overflow-x-auto text-start">
+                    <pre id="code" class="text-gray-300 max-h-52 max-w-52">
+        <code>
+          &lt;div class="flex justify-center">
+            &lt;div class=" rounded-lg shadow-lg px-8 py-6">
+                &lt;div class="flex flex-col gap-4 items-center justify-between">
+                    &lt;h3 class="text-2xl font-bold text-red-600 font-logo">My Brithday&gt;/h3>
+                    &lt;span id="countdown" class="text-5xl font-semibold text-white hover:text-red-600 duration-300 font-logo">&gt;/span>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+
+        &lt;script>
+          // Set the date we're counting down to
+          var countDownDate = new Date("Jul 23, 2024 00:00:00").getTime();
+
+          // Update the count down every 1 second
+          var x = setInterval(function() {
+
+              // Get today's date and time
+              var now = new Date().getTime();
+
+              // Find the distance between now and the count down date
+              var distance = countDownDate - now;
+
+              // Time calculations for days, hours, minutes and seconds
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+              // Output the result in an element with id="countdown" 
+              document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds +
+                  "s ";
+
+              // If the count down is over, write some text 
+              if (distance < 0) {
+                  clearInterval(x);
+                  document.getElementById("countdown").innerHTML = "EXPIRED";
+              }
+          }, 1000);
+      &lt;/script>
+      
+      </code>
+              </pre>
+                  </div>
+                </div>
+              </div>
+              <!--end CODE -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- EndFun6-->
 
 
 
