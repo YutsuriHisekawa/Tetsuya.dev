@@ -2,6 +2,14 @@
 module.exports = {
   content: ["index.html"],
   theme: {
+
+
+      backgroundImage: {
+        'wolf': "url('/asset/img/2.png')",
+        'footer-texture': "url('/img/footer-texture.png')",
+      },
+
+
     fontFamily: {
       'sans': ['ui-sans-serif', 'system-ui', ],
       'serif': ['ui-serif', 'Georgia',],
