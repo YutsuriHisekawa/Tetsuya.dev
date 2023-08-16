@@ -202,7 +202,7 @@
                   Button Number
                 </h1>
   
-                <div x-data="{ count: 24 }" class="text-2xl font-bold text-white  mt-5 ">
+                <div x-data="{ count: 0 }" class="text-5xl font-bold text-white font-logo mt-5 ">
                     <button x-on:click="count++" class="p-2 border rounded-full hover:bg-red-600">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
@@ -230,7 +230,23 @@
                   <div class="overflow-x-auto text-start">
                   <pre id="code" class="text-gray-300 max-h-52 max-w-52">
           <code>
-        Sabar Masih belum gw isi 
+            &lt;div x-data="{ count: 0 }" class="text-5xl font-bold text-white font-logo mt-5"&gt; 
+             &lt;button x-on:click="count++" class="p-2 border rounded-full hover:bg-red-600"&gt; 
+             &lt;svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" 
+             stroke="currentColor" &gt;
+              &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              &lt;/svg>
+             &lt;button&gt;
+            &lt;/div&gt;
+            &lt;span x-text="count" class="p-3"&gt;&lt;/span>
+            &lt;button x-on:click="count--" class="p-2 border rounded-full hover:bg-red-600"&gt; 
+            &lt;svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" 
+            stroke="currentColor" &gt;
+             &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+             &lt;/svg>
+            &lt;button&gt;
+
+            &lt;script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"&gt;&lt;/script>
         </code>
                 </pre>
               </div>
