@@ -43,23 +43,6 @@
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
           </svg>
       </button>
-      <div class="hidden w-full md:block md:w-auto " id="navbar-default">
-        <ul class="  font-medium flex flex-col p-4 md:p-0 mt-4 border -100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0  font-logo text-2xl">
-          <li>
-            <a href="#Tetsuya" class="block py-2 pl-3 pr-4 text-white  rounded md:bg-transparent  md:p-0 hover:text-red-600 duration-300 ">Home</a>
-          </li>
-          <li>
-            <a href="#About" class="block py-2 pl-3 pr-4 text-white  rounded md:bg-transparent  md:p-0 hover:text-red-600 duration-300 ">About</a>
-          </li>
-          <li>
-            <a href="#Work" class="block py-2 pl-3 pr-4 text-white  rounded md:bg-transparent  md:p-0 hover:text-red-600 duration-300 ">Projects</a>
-          </li>
-          <li>
-            <a href="fun.html" class="block py-2 pl-3 pr-4 text-white  rounded md:bg-transparent  md:p-0 hover:text-red-600 duration-300 ">Fun</a>
-          </li>
-
-        </ul>
-      </div>
     </div>
   </nav>
   <!--end nav-->
@@ -68,20 +51,21 @@
   <section id="Tetsuya" class="bg-black">
     <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
         <div class="mr-auto place-self-center lg:col-span-7 animate-fade-right animate-once animate-ease-in-out animate-duration-1000">
-            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white hover:text-red-600 font-logo duration-300">Hello I'm</h1>
-            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-red-600 hover:text-white font-logo duration-300">Tetsuya Kumiko</h1>
+            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white hover:text-red-600 font-logo duration-300">Tetsuya</h1>
+            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-red-600 hover:text-white font-logo duration-300">PL4Y GrOuNd</h1>
           
         </div>
         <div class=" lg:mt-0 lg:col-span-5 lg:flex animate-fade-left animate-once animate-ease-in-out">
-            <img src="/asset/img/wolf1.png" alt="" class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+            <img src="/asset/img/wolf2.png" alt="" class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
         </div>                
     </div>
 </section>
 <!--end hero-->
 
-<!--About-->
-<section id="About" class="py-10 md:py-32 animate-fade-up animate-once animate-ease-in-out animate-duration-[1500ms]">
-  <div class="bg-[url('/asset/img/1.png')] bg-cover bg-center from-transparent via-red-600 to-transparent ">
+
+<!-- Fun -->
+<section id="Fun" class="py-10 md:py-32 animate-fade-up animate-once animate-ease-in-out animate-duration-[1500ms]">
+  <div class="bg-[url('/asset/img/2.png')] bg-cover bg-center from-transparent via-red-600 to-transparent ">
     <div class="bg-black bg-opacity-60">
       <div class="bg-white/5">
         <div class="container mx-auto text-center">
@@ -89,111 +73,121 @@
             <div class="col-start-3 col-span-8 py-32">
               <h1
                 class="font-logo text-5xl md:text-3xl capitalize  text-red-600 font-black hover:text-white leading-tight duration-300 ">
-                SLEEP , EAT , GAME , CODE and REPEAT
+                Strong Password Generator
               </h1>
-              <h1 class="mt-4 p-6 md:pl-1 text-white hover:text-red-600 duration-300 font-japan2 leading-relaxed text-lg  ">                  
-              私は、自分の能力に応じてシンプルでモダンな <span class="font-logo ">website</span> サイトの外観を作成して人々を助けることに非常に興味があり、現在のテクノロジー時代にコーディングを学ぶことがとても好きです。 <br><br>
-              <span class=" text-red-600 hover:text-white duration-300 font-logo"> 
-                I'm very interested in helping people by creating a simple, modern website appearance according to my abilities, and I really like learning to code in the current technological era.
-              </span>
-              </h1>
+
+              <div class="mt-7">
+                <label for="length" class="text-white font-bold font-logo">Password Length:</label>
+                <input type="number" id="length" name="length"
+                    class="ml-2 border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    min="6" max="30" value="12">
+            </div>
+            <div class="mb-6">
+                <label for="includeUppercase" class="text-white font-bold font-logo">Include Uppercase Letters:</label>
+                <input type="checkbox" id="includeUppercase" name="includeUppercase" class="ml-2">
+            </div>
+            <div class="mb-6">
+                <label for="includeNumbers" class="text-white font-bold font-logo">Include Numbers:</label>
+                <input type="checkbox" id="includeNumbers" name="includeNumbers" class="ml-2">
+            </div>
+            <div class="mb-6">
+                <label for="includeSymbols" class="text-white font-bold font-logo">Include Symbols:</label>
+                <input type="checkbox" id="includeSymbols" name="includeSymbols" class="ml-2">
+            </div>
+            <button id="generateBtn"
+                class="bg-red-700 hover:bg-red-900 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline duration-300">Generate
+                Password</button>
+            <div id="password" class="mt-6 font-logo text-3xl text-red-600 hover:text-white"></div>
+
+            <!-- CODE SESSION -->
+            <div class="rrelative  mx-auto mt-5">
+              <div class="bg-black bg-opacity-60 text-white p-4 rounded-md">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-white font-logo text-xl" >Code:</span>
+                    <button class="code bg-red-600 hover:bg-red-800 duration-300 text-gray-300 px-3 py-1 rounded-md font-logo text-xl" data-clipboard-target="#code">
+                Copy
+              </button>
+                </div>
+                <div class="overflow-x-auto text-start">
+                <pre id="code" class="text-gray-300 max-h-52 max-w-52">
+        <code>
+        &lt;div class="flex flex-col items-center justify-center h-screen"&gt;
+        &lt;div class="mb-6"&gt;
+        &lt;label for="length" class="text-white font-bold"&gt; Password Lenght &lt;/label&gt;
+        &lt;input type="number" id="length" name="length" 
+        class="ml-2 border rounded py-2 px-3 text-white leading-tight 
+        focus:outline-none 
+        focus:shadow-outline"
+        min="6" max="30" value="12"&gt;
+        &lt;/div&gt;
+        &lt;div class="mb-6"&gt; 
+        &lt;label for="includeUppercase" class="text-gray-700 font-bold">Include Uppercase Letters:&lt;/label&gt;
+        &lt;input type="checkbox" id="includeUppercase" name="includeUppercase" class="ml-2"&gt;
+        &lt;/div&gt;
+        &lt;div class="mb-6"&gt; 
+        &lt;label for="includeNumbers" class="text-gray-700 font-bold">Include Numbers:&lt;/label&gt;
+        &lt;input type="checkbox" id="includeNumbers" name="includeNumbers" class="ml-2&gt;
+        &lt;/div&gt;
+        &lt;div class="mb-6"&gt; 
+        &lt;label for="includeSymbols" class="text-gray-700 font-bold">Include Symbols:&lt;/label&gt;
+        &lt;input type="checkbox" id="includeSymbols" name="includeSymbols" class="ml-2"&gt;
+        &lt;/div&gt;
+        &lt;button id="generateBtn 
+        class="bg-red-700 
+        hover:bg-red-900 text-white font-bold py-2 
+        px-4 rounded-full focus:outline-none focus:shadow-outline duration-300"
+        >Generate Password&lt;/button&gt;
+        &lt;div id="password" class="mt-6"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;script&gt;
+        var generateBtn = document.getElementById('generateBtn');
+        var lengthInput = document.getElementById('length');
+        var includeUppercaseInput = document.getElementById('includeUppercase');
+        var includeNumbersInput = document.getElementById('includeNumbers');
+        var includeSymbolsInput = document.getElementById('includeSymbols');
+        var passwordDisplay = document.getElementById('password');
+    
+        var lowercaseLetters = 'abcdefghijklmnopqrstuvwxyz';
+        var uppercaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var numbers = '0123456789';
+        var symbols = '!@#$%^&*()_+-={}[]|\\:;"<>,.?/~';
+    
+        generateBtn.addEventListener('click', () => {
+            var length = lengthInput.value;
+            var includeUppercase = includeUppercaseInput.checked;
+            var includeNumbers = includeNumbersInput.checked;
+            var includeSymbols = includeSymbolsInput.checked;
+    
+            let validChars = lowercaseLetters;
+            if (includeUppercase) validChars += uppercaseLetters;
+            if (includeNumbers) validChars += numbers;
+            if (includeSymbols) validChars += symbols;
+    
+            let password = '';
+            for (let i = 0; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * validChars.length);
+                password += validChars[randomIndex];
+            }
+    
+            passwordDisplay.innerText = password;
+        });
+        &lt;/script&gt;
+      </code>
+              </pre>
+            </div>
+            </div>
+            </div>
+            <!--end CODE -->
             </div>
           </div>
         </div>
+        
       </div>
     </div>
   </div>
 </section>
-<!--end about-->
-
-<!-- Work -->
-<section id="Work" class="bg-gradient-to-r from-black via-red-600 to-black antialiased animate-fade animate-duration-[1500ms] animate-ease-in-out mb-5">
-  <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="text-6xl font-extrabold leading-tight tracking-tight text-white sm:text-6xl  font-japan2">
-        プロジェクト
-      </h2>
-      <p class="mt-4 text-base font-normal text-white sm:text-xl font-logo">
-        Projects!
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-      <div class="space-y-4">
-        <span
-          class="shadow-2xl text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded ">
-          <img src="/asset/project/1.png" alt="" class=" animate-pulse animate-infinite animate-duration-[1500ms] animate-ease-in transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-        </span>
-        <h3 class="text-2xl font-bold leading-tight text-white font-logo">
-          Honda Surabaya Timur
-        </h3>
-        <p class=" font-logo text-white text-sm"> HTML , CSS , BOOTSTRAP , JS </p>
-
-        <a href="http://hondasurabayatimur.com/" title=""
-          class="font-logo text-white hover:text-red-950 duration-300 bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-          role="button">
-          View Project
-          <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-            fill="currentColor">
-            <path fill-rule="evenodd"
-              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-              clip-rule="evenodd" />
-          </svg>
-        </a>
-      </div>
-      
-      <div class="space-y-4">
-        <span
-          class="shadow-2xl text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded ">
-          <img src="/asset/project/2.png" alt="" class="animate-pulse animate-infinite animate-duration-[1500ms] animate-ease-in transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-        </span>
-        <h3 class="text-2xl font-bold leading-tight text-white font-logo">
-          Maid Cafe
-        </h3>
-        <p class=" font-logo text-white text-sm"> HTML , CSS , BOOTSTRAP , JS </p>
-
-        <a href="https://maid-cafe-theta.vercel.app/" title=""
-          class="font-logo text-white hover:text-red-950 duration-300 bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-          role="button">
-          View Project
-          <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-            fill="currentColor">
-            <path fill-rule="evenodd"
-              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-              clip-rule="evenodd" />
-          </svg>
-        </a>
-      </div>
-
-      <div class="space-y-4">
-        <span
-          class="shadow-2xl text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded ">
-          <img src="/asset/project/3.png" alt="" class="animate-pulse animate-infinite animate-duration-[1500ms] animate-ease-in transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-        </span>
-        <h3 class="text-2xl font-bold leading-tight text-white font-logo">
-          Vue3 - Todo - List
-        </h3>
-        <p class=" font-logo text-white text-sm"> Vue3 , Tailwind CSS </p>
-
-        <a href="https://vue-todo-hazel.vercel.app/" title=""
-          class="font-logo text-white hover:text-red-950 duration-300 bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-          role="button">
-          View Project
-          <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-            fill="currentColor">
-            <path fill-rule="evenodd"
-              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-              clip-rule="evenodd" />
-          </svg>
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!--end work-->
-
-
+<!--End Fun-->
 
 
 
