@@ -2,5 +2,9 @@
   "devDependencies": {
     "tailwindcss": "^3.3.3",
     "tailwindcss-animated": "^1.0.1"
+  },
+  "dependencies": {
+    "taos": "^1.0.5",
+    "tw-elements": "^1.0.0-beta3"
   }
 }

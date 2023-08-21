@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tsukimi+Rounded:wght@600&display=swap" rel="stylesheet">
-
+<script>document.documentElement.classList.add('js')</script>
 
 </head>
 <body class="bg-black " >
@@ -89,11 +89,11 @@
   <!-- hero -->
   <section id="Tetsuya" class="bg-black " >
     <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-        <div class="mr-auto place-self-center lg:col-span-7 animate-fade-right animate-once animate-ease-in-out animate-duration-1000">
+        <div class="mr-auto place-self-center lg:col-span-7 delay-[300ms] duration-[600ms] taos:[transform:translate3d(-200px,0,0)_scale(0.6)] taos:opacity-0" data-taos-offset="400" ">
             <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white hover:text-blue-600 font-logo duration-300">Hello I'm</h1>
             <h1  class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-blue-600 hover:text-white font-logo duration-300">Tetsuya Kumiko</h1>          
         </div>
-        <div class=" lg:mt-0 lg:col-span-5 lg:flex animate-fade-left animate-once animate-ease-in-out">
+        <div class=" lg:mt-0 lg:col-span-5 lg:flex duration-[300ms] taos:[transform:perspective(2500px)_rotateY(-100deg)] taos:invisible taos:[backface-visibility:hidden]" data-taos-offset="400">
             <img src="/asset/img/wolf1.png" alt="">
         </div>                
     </div>
@@ -101,7 +101,7 @@
 <!--end hero-->
 
 <!--About-->
-<section id="About" class="py-10 md:py-32 animate-fade-up animate-once animate-ease-in-out animate-duration-[1500ms] ">
+<section id="About" class="py-10 md:py-32 delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,200px,0)_scale(1.2)] taos:opacity-0" data-taos-offset="300" >
   <div class="bg-[url('/asset/img/1.png')] bg-cover bg-center from-transparent via-blue-600 to-transparent outline-2">
     <div class="bg-black bg-opacity-80 ">
       <div class="bg-white/5">
@@ -128,7 +128,7 @@
 <!--end about-->
 
 <!-- Work -->
-<section id="Work" class="py-10 md:py-32 animate-fade-up animate-once animate-ease-in-out animate-duration-[1500ms]">
+<section id="Work" class="py-10 md:py-32 ">
   <div class="bg-cover bg-center from-transparent via-blue-600 to-transparent bg-fixed " style="background-image: url('/asset/img/8.png');;">
     <div class="bg-black bg-opacity-70">
       <div class="bg-white/5">
@@ -273,5 +273,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
 <script src="/src/script.js" ></script>
 
+
+<script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
 </body>
 </html>
