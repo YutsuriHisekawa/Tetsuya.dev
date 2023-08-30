@@ -28,6 +28,12 @@
 </head>
 <body class="bg-black " >
 
+  <style >
+      .active-link {
+        color: #3182CE; /* Warna biru untuk text-blue-600 di Tailwind */
+    }
+  </style>
+
  <!--Dumb Section !!-->
  <ul class="circles">
   <li></li>
@@ -65,14 +71,9 @@
       <div class="hidden w-full md:block md:w-auto " id="navbar-default">
         <ul class="  font-medium flex flex-col p-4 md:p-0 mt-4 border -100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0  font-logo text-2xl">
           <li>
-            <a href="#Tetsuya" class="block py-2 pl-3 pr-4 text-white  rounded md:bg-transparent  md:p-0 hover:text-blue-600 duration-300 ">Home</a>
+            <a href="#Tetsuya" class=" active-link block py-2 pl-3 pr-4 text-white  rounded md:bg-transparent  md:p-0 hover:text-blue-600 duration-300 ">Home</a>
           </li>
-          <li>
-            <a href="#About" class="block py-2 pl-3 pr-4 text-white  rounded md:bg-transparent  md:p-0 hover:text-blue-600 duration-300 ">About</a>
-          </li>
-          <li>
-            <a href="#Work" class="block py-2 pl-3 pr-4 text-white  rounded md:bg-transparent  md:p-0 hover:text-blue-600 duration-300 ">Projects</a>
-          </li>
+
           <li>
             <a href="fun.html" class="block py-2 pl-3 pr-4 text-white  rounded md:bg-transparent  md:p-0 hover:text-blue-600 duration-300 ">Playground</a>
           </li>

@@ -1471,6 +1471,11 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
   transform: translate3d(0,200px,0) scale(1.2);
 }
 
+.active-link {
+  color: #3182CE;
+  /* Warna biru untuk text-blue-600 di Tailwind */
+}
+
 /* width */
 
 ::-webkit-scrollbar {
@@ -1933,6 +1938,11 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
 @media (min-width: 1280px) {
   .xl\:gap-0 {
     gap: 0px;
+  }
+
+  .xl\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .xl\:text-6xl {

@@ -34,7 +34,13 @@ module.exports = {
     }
   },
   plugins: [
-    require('taos/plugin')
+    require('taos/plugin'),
+
   ],
-  
+
+  variants: {
+    extend: {
+      textColor: ['active'],
+    },
+  },
 }

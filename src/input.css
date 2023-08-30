@@ -4,6 +4,9 @@
 
 
 
+      .active-link {
+        color: #3182CE; /* Warna biru untuk text-blue-600 di Tailwind */
+    }
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
