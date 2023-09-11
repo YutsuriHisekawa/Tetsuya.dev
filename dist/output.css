@@ -961,10 +961,6 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
   place-self: center;
 }
 
-.self-center {
-  align-self: center;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1256,14 +1252,6 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
 
 .pr-4 {
   padding-right: 1rem;
-}
-
-.pr-5 {
-  padding-right: 1.25rem;
-}
-
-.pl-6 {
-  padding-left: 1.5rem;
 }
 
 .text-center {
