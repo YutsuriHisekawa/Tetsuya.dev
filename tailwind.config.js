@@ -13,8 +13,31 @@ module.exports = {
     files: ['*.{html,js}'],
   },
   theme: {
+    extend:{      
 
-
+            keyframes: {
+        typing: {
+          "0%": {
+            width: "0%",
+            visibility: "hidden"
+          },
+          "100%": {
+            width: "100%"
+          }  
+        },
+        blink: {
+          "50%": {
+            borderColor: "transparent"
+          },
+          "100%": {
+            borderColor: "white"
+          }  
+        }
+      },
+      animation: {
+        typing: "typing 2s steps(20) infinite alternate, blink .7s infinite"
+      },
+      
       backgroundImage: {
         'wolf': "url('/asset/img/2.png')",
         'footer-texture': "url('/img/footer-texture.png')",
@@ -31,7 +54,9 @@ module.exports = {
       'logo' : ['Gloria Hallelujah'],
       'japan': ['Aoboshi One'],
       'japan2' : ['Tsukimi Rounded']
-    }
+    }}
+
+
   },
   plugins: [
     require('taos/plugin'),

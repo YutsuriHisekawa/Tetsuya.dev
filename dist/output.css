@@ -873,12 +873,33 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.cursor-pointer {
-  cursor: pointer;
+@keyframes typing {
+  0% {
+    width: 0%;
+    visibility: hidden;
+  }
+
+  100% {
+    width: 100%;
+  }
 }
 
-.grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+
+  100% {
+    border-color: white;
+  }
+}
+
+.animate-typing {
+  animation: typing 2s steps(20) infinite alternate, blink .7s infinite;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .grid-cols-2 {
@@ -944,6 +965,10 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
   align-self: center;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .overflow-x-auto {
   overflow-x: auto;
 }
@@ -992,6 +1017,10 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
   border-width: 4px;
 }
 
+.border-r-4 {
+  border-right-width: 4px;
+}
+
 .border-dashed {
   border-style: dashed;
 }
@@ -1008,6 +1037,11 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
 
 .border-white\/5 {
   border-color: rgb(255 255 255 / 0.05);
+}
+
+.border-r-white {
+  --tw-border-opacity: 1;
+  border-right-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .bg-black {
@@ -1222,6 +1256,14 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
 
 .pr-4 {
   padding-right: 1rem;
+}
+
+.pr-5 {
+  padding-right: 1.25rem;
+}
+
+.pl-6 {
+  padding-left: 1.5rem;
 }
 
 .text-center {
@@ -1478,6 +1520,29 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
 
 .\[transform\:translate3d\(0\2c 200px\2c 0\)_scale\(1\.2\)\] {
   transform: translate3d(0,200px,0) scale(1.2);
+}
+
+.cursor::after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: #fff;
+  animation: cursor 0.6s linear infinite alternate;
+  will-change: opacity;
+}
+
+@keyframes cursor {
+  0%,
+  40% {
+    opacity: 1;
+  }
+
+  60%,
+  100% {
+    opacity: 0;
+  }
 }
 
 .active-link {
