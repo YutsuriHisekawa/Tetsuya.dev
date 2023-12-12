@@ -1523,12 +1523,12 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
 
 @keyframes cursor {
   0%,
-  40% {
+	40% {
     opacity: 1;
   }
 
   60%,
-  100% {
+	100% {
     opacity: 0;
   }
 }
@@ -1718,6 +1718,13 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
 /*
 -- End BackGround Animation 
 */
+
+.image-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
 
 .last\:mr-0:last-child {
   margin-right: 0px;

@@ -4,53 +4,56 @@
 
 
 .cursor::after {
-  display: block;
-  content: '';
-  position: absolute;
-  width: 4px;
-  height: 100%;
-  background-color: #fff;
-  animation: cursor 0.6s linear infinite alternate;
-  will-change: opacity;
+	display: block;
+	content: '';
+	position: absolute;
+	width: 4px;
+	height: 100%;
+	background-color: #fff;
+	animation: cursor 0.6s linear infinite alternate;
+	will-change: opacity;
 }
- 
+
 @keyframes cursor {
-  0%,
-  40% {
-    opacity: 1;
-  }
- 
-  60%,
-  100% {
-    opacity: 0;
-  }
+
+	0%,
+	40% {
+		opacity: 1;
+	}
+
+	60%,
+	100% {
+		opacity: 0;
+	}
 }
 
 
-      .active-link {
-        color: #3182CE; /* Warna biru untuk text-blue-600 di Tailwind */
-    }
+.active-link {
+	color: #3182CE;
+	/* Warna biru untuk text-blue-600 di Tailwind */
+}
+
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+	width: 10px;
 }
-  
+
 /* Track */
 ::-webkit-scrollbar-track {
-    background: rgb(0, 0, 0);
+	background: rgb(0, 0, 0);
 }
-  
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgb(10, 21, 119);
-    border-radius: 5px;
+	background: rgb(10, 21, 119);
+	border-radius: 5px;
 }
-  
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #2f1e6b;
-    animation-duration: 50ms;
-    -webkit-animation-duration: 50ms;
+	background: #2f1e6b;
+	animation-duration: 50ms;
+	-webkit-animation-duration: 50ms;
 }
 
 /*Start Animations*/
@@ -59,41 +62,49 @@
 		top: -300px;
 		opacity: 0;
 	}
+
 	to {
 		top: 0;
 		opacity: 1;
 	}
 }
+
 @keyframes animatetop {
 	from {
 		top: -300px;
 		opacity: 0;
 	}
+
 	to {
 		top: 0;
 		opacity: 1;
 	}
 }
+
 @-webkit-keyframes zoomIn {
 	0% {
 		opacity: 0;
 		-webkit-transform: scale3d(0.3, 0.3, 0.3);
 		transform: scale3d(0.3, 0.3, 0.3);
 	}
+
 	50% {
 		opacity: 1;
 	}
 }
+
 @keyframes zoomIn {
 	0% {
 		opacity: 0;
 		-webkit-transform: scale3d(0.3, 0.3, 0.3);
 		transform: scale3d(0.3, 0.3, 0.3);
 	}
+
 	50% {
 		opacity: 1;
 	}
 }
+
 /*End Animations*/
 /*
 -- Start BackGround Animation 
@@ -216,6 +227,14 @@
 		border-radius: 50%;
 	}
 }
+
 /*
 -- End BackGround Animation 
 */
+
+.image-container {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
